@@ -1,0 +1,10 @@
+FROM ubuntu:18.04
+WORKDIR /src
+COPY ./model /src
+COPY ./entrypoint.sh /src
+RUN apt-get update && apt-get install -y python3.6 && apt-get install -y python3-pip
+RUN pip3 install tensorflow==1.12.0
+RUN pip3 install bert-serving-server
+RUN pip3 install -U bert-serving-server[http]
+EXPOSE 8125
+CMD ["bert-serving-start", "-http_port", "8125", "-num_worker=1", "-model_dir", "/src", "-cpu"]
