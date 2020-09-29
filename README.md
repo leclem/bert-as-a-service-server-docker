@@ -9,9 +9,9 @@ Run `docker build -t bert-server -f ./DOCKERFILE .`
 Run the docker anywhere :)
 
 For local testing : 
-`docker run -dit -p 5555:5555 -p 5556:5556 bert-server` #Runs the server container
-`pip3 install -U bert-serving-client scikit` #Install libraries
-`python3 test.py`#Run the client side and compare two strings that you can modify in the script
+⋅⋅⋅ `docker run -dit -p 5555:5555 -p 5556:5556 bert-server` #Runs the server container
+⋅⋅⋅ `pip3 install -U bert-serving-client scikit` #Install libraries
+⋅⋅⋅ `python3 test.py`#Run the client side and compare two strings that you can modify in the script
 
 
 You can also download another model from https://github.com/google-research/bert
