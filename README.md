@@ -4,7 +4,7 @@ Simple server of Bert-As-A-Service with a multilingual BERT model allowing to tr
 I will make run a simple docker image of the server of Bert as a service on a cpu : https://github.com/hanxiao/bert-as-service
 
 Usage : 
-Download the BERT-Base, Multilingual Cased model supporting 104 languages, 12-layer, 768-hidden, 12-heads, 110M parameters and unzip it in "model"  https://storage.googleapis.com/bert_models/2018_11_23/multi_cased_L-12_H-768_A-12.zip
+Download the BERT-Base, Multilingual Cased model supporting 104 languages, 12-layer, 768-hidden, 12-heads, 110M parameters and unzip it in the "model" folder  https://storage.googleapis.com/bert_models/2018_11_23/multi_cased_L-12_H-768_A-12.zip
 Run `docker build -t bert-server -f ./DOCKERFILE .`
 Run the docker anywhere :)
 
