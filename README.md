@@ -13,5 +13,11 @@ For local testing :
 ⋅⋅⋅ `pip3 install -U bert-serving-client scikit` #Install libraries
 ⋅⋅⋅ `python3 test.py`#Run the client side and compare two strings that you can modify in the script
 
+or 
+
+⋅⋅⋅ `docker run -dit -p 8125:8125 bert-server` #Runs the server container
+⋅⋅⋅ `curl -X POST http://localhost:8125/encode \
+  -H 'content-type: application/json' \
+  -d '{"id": 123,"texts": ["hello world"], "is_tokenized": false}'`
 
 You can also download another model from https://github.com/google-research/bert
